@@ -1,0 +1,1 @@
+$("h1").css("color", "red") //changes h1 color to red
