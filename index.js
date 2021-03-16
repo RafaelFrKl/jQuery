@@ -24,7 +24,7 @@ $("h1").append("<button>New</button>");         //Append adds new element behind
 //<h1>Hello<button>New</button></h1>
 $("button").remove();                           //Removes all instances of Seleced element
 
-$("h1").before("<button>New</button>");
+$("h1").before("<button>New</button>"); 
 
 //Event Listeners
 $("h1").on("click", function() {                //On click of h1, equivalent to $("h1").click(function({});
@@ -39,4 +39,22 @@ $("h1").on("mouseover", function() {            //On mouseover of h1
 
 $("input").keypress(function(event){            //Log keypress input
     $("h1").text(event.key)
+});
+
+//Website Animations
+$("button").on("click", function() {            
+    /*$("h1").hide();                           //Hides element                  
+    $("h1").show();                             //Shows element
+    $("h1").toggle();                           //Toggles Show/Hide
+    
+    $("h1").fadeOut();                          //Fades out element
+    $("h1").fadeIn();                           //Fades in element
+    $("h1").fadeToggle();                       //Toggles Fade out/in
+    
+    $("h1").slideUp();                          //Slides up element out of view, Drop down menus
+    $("h1").slideDown();                        //Slides down element into view
+    $("h1").slideToggle();                      //Toggles Slide up/down*/
+    
+    //$("h1").animate({opacity: 0.5});          //Can only add css rules with numeric value
+    $("h1").slideUp().slideDown().animate({opacity: 0.5});  //possible to chain animations together
 });
